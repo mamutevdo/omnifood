@@ -1,0 +1,544 @@
+
+  /* ---------header------ */
+
+html{
+  background-color: aliceblue;
+  color: rgb(22, 21, 21);
+  font-family: 'Lato', 'Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix{
+  zoom: 1;
+
+}
+
+.clearfix:after {
+  content: ".";
+  clear:both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.1)), url(resources/img/hero.jpg);
+    height:100vh;
+    background-size: cover; 
+    background-position: center;
+    
+}
+h1{
+    margin: 0;
+    font-weight: 300; text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    letter-spacing: 1px 
+}
+.hero-text-box{
+    position: absolute; 
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* აქ left:20% იგივე შედეგს არ მოგვცემს? */
+    }
+  .logo{
+    
+    width: 6%; 
+    margin: auto 250px;
+    margin-top: 1%;
+    z-index: 20;
+  }
+  .logo-black{
+    display: none;
+    width: 4%; 
+    margin: auto 250px;
+    margin-top: 1%;
+    z-index: 20;
+  }
+  /* mobile nav */
+
+  .mobile-nav-icon{
+    display: none;
+    float: right;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  .mobile-nav-icon-btn{
+    font-size: 200%;
+    color: #fff;
+  }
+  
+   /* stick */
+
+   .stick.mobile-nav-icon-btn{
+    color: black;
+   }
+
+   .stick{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 20;
+
+   }
+
+   .stick .main-nav {
+    margin-top: 18px;
+   }
+
+   .stick .main-nav li a:link,
+   .stick .main-nav li a:visited {
+    color: #555;
+    padding: 30px 0;
+    
+  
+   }
+   .stick .main-nav li{
+    margin-top: 20px;
+   } 
+
+   .stick .logo{ display: none;}
+   .stick .logo-black {display: inline-block;}
+
+
+
+  /* reusable components */
+  .btn:link,
+  .btn:visited,
+  input[type="submit"]{
+  
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    border: solid 1px chocolate;
+    border-radius: 20px;
+    margin-right: 2%;
+    font-size: 140%;
+    
+}
+ .btn{
+  transition: background-color 0.3s;
+ }
+
+
+
+  .btn-full:link,
+  .btn-full:visited,
+  input[type="submit"]{
+    color: #fff;
+    background-color: chocolate;
+   
+    
+}
+  .btn-ghost:link,
+  .btn-ghost:visited{
+    color: chocolate;
+    
+    
+  }
+
+.btn:hover,
+.btn:active,
+input[type="submit"]{
+    background-color:rgb(211, 96, 14);
+  
+    
+}
+.btn-ghost:hover,
+.btn-ghost:active{
+color: #fff;
+}
+
+.down2{
+  margin-left: 80px;
+}
+
+
+
+
+
+.main-nav{
+    float: right;
+    margin-top: 70px;
+    margin-right: 220px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-size-adjust: 90%;
+    transition: border-bottom 0.2s;
+    }
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid chocolate;
+    padding-bottom: 5px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+  padding: 45px 0;
+}
+h1,h2{
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h1{
+  word-spacing: 4px;
+  margin-bottom: 20px;
+}
+h2{
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+
+}
+h2:after{
+  display: block;
+  height: 2px;
+  background-color: chocolate;
+  width: 100px;
+  margin: auto;
+  margin-top: 30px;
+  content: " ";
+ 
+}
+
+/* .box{
+  padding: 1%;
+} */
+h3{
+  font-size: 140%;
+  margin-bottom: 15px;
+  
+}
+ .box p{
+  font-size: 90%;
+  line-height: 145% ;
+  padding: 1%;
+
+ 
+ }
+ .icon-big{
+  font-size: 300%;
+  display: block;
+  color: chocolate;
+  margin: 10px;
+ }
+ .long-copy{
+  line-height: 145%;
+  width: 70%;
+  margin-left: 30%;
+
+  
+ }
+ .one{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.meals-showcase{
+  width: 100%;
+  list-style: none;
+  
+}
+.meals-showcase li{
+  display: block;
+  float: left;
+  width: 25%;
+}
+.meal-photo{
+  width: 100%;
+  margin: 0%;
+  overflow: hidden;
+  background-color: black;
+}
+.meal-photo img{
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.section-meals{
+  padding: 0;
+
+}
+.meal-photo img:hover{
+  transform: scale(1.03);
+  opacity: 1;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+ /* .steps-box{
+  margin: 30px;
+ } */
+ /* .steps-box:first-child{
+  text-align: right;
+  padding-right: 3%;
+ 
+ }  */
+/* .steps-box:last-child{
+  padding-left: 3%;
+  
+ } */
+ .app-screen{
+  width: 25%;
+  float: right;
+  margin-right: 50px;
+ } 
+ .bicho{
+  margin-top: 30px;
+ }
+
+ .work-steps div{
+  color: chocolate;
+  border: 2px solid chocolate;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 6px;
+  float: left;
+  font-size: 150%;
+  
+  
+ }
+ .work-steps{
+  margin-top: 50px;
+ }
+ .work-steps p{
+  margin-left: 100px;
+  margin-top: 60px;
+ }
+ .btn-app img{
+  width: 150px;
+  height: auto;
+  margin-top: 50px;
+
+ }
+.box img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.box img:hover {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  transform: scale(1.03);
+}
+.icon-small{
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: chocolate;
+  font-size: 120%;
+  vertical-align: middle ;
+  line-height: 120%;
+  margin-top: -4px;
+}
+.section-steps {
+  background-color: #fff;
+}
+.section-testimonials{
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.4)), url(resources/img/back-customers.jpg);
+  background-size: cover; 
+  background-position: center;
+  color: #fff;
+  background-attachment: fixed;
+
+}
+blockquote{
+  padding: 1px;
+  font-style: italic;
+  line-height: 145%;
+}
+cite{
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+cite img{
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align:middle;
+}
+blockquote::before{
+  content: "\0022";
+  font-size: 500%;
+  display: block;
+  
+}
+
+/* sign up */
+
+
+.plan-box{
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 5px 10px #888888;
+}
+
+.plan-box div{
+  padding: 15px;
+ 
+}
+.plan-box div h3{
+  font-weight: 300;
+}
+.plan-price{
+  color: chocolate;
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  font-weight: 300;
+}
+.plan-price-meal{
+  font-size: 90%;
+}
+.plan-price span{
+  font-size: 30%;
+  font-weight: 300;
+}
+.plan-box ul{
+  list-style: none;
+
+}
+.plan-box ul li{
+  padding: 5px 0;
+}
+
+/* registraciis forma */
+
+.contact-form{
+  width: 60%;
+  margin: 0 auto;
+
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid cornflowerblue;
+}
+textarea{
+  height: 100px;
+}
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+*:focus {
+  outline: none;
+}
+
+/* footer */
+
+footer{
+  background-color: #333;
+  padding-top: 60px;
+
+}
+.footer-nav li a{
+list-style: none;
+text-decoration: none;
+color:darkgray;
+}
+.social-icons{
+  list-style: none; 
+}
+
+.footer-nav li a:hover{
+  color: #fff;
+}
+
+
+.footer-nav li,
+.social-icons li{
+  display: inline-block;
+  margin-right: 20px;
+
+}
+
+.footer-nav{
+  margin-left: 65px;
+}
+.social-icons{
+    
+margin-left: 60%;
+    
+}
+footer p{
+  color: darkgray;
+  text-align: center;
+  font-size: 90%;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  display: flex block;
+  justify-content: center;
+ 
+ 
+}
+.icon-last{
+  color: darkgray;
+  text-align: center;
+
+}
+.fb:hover{
+  color: blue;
+  transition: color 0.3s;
+  transform: scale(1.5);
+}
+.twt:hover{
+  color: aqua;
+  transition: color 0.3s;
+  transform: scale(1.5);
+}
+.ggl:hover{
+  color: red;
+  transition: color 0.3s;
+  transform: scale(1.5);
+}
+.inst:hover{
+  color: blueviolet;
+  transition: color 0.3s;
+  transform: scale(1.5);
+}
+
+
+.app-screen.active{
+  transform: translateY(0);
+  opacity: 1;
+}
